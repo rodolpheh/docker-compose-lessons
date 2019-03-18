@@ -1,0 +1,11 @@
+version: '3'
+services:
+  web:
+    image: isen/nodeapp
+    depends_on: 
+      - redis
+    restart: always
+    ports:
+      - 80:8080
+  redis:
+    image: redis
